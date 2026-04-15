@@ -70,6 +70,7 @@ Le client ne contient **aucune logique métier** : il se contente d'appeler l'AP
 - Symfony 7
 - Doctrine ORM
 - LexikJWT (authentification JWT RS256)
+- NelmioApiDoc / Swagger (documentation interactive)
 - MySQL 8
 
 **Client (`civilipedia-client`)**
@@ -117,7 +118,7 @@ Cela crée la base `civilipedia` et l'alimente avec des données de test (articl
 cd civilipedia-api
 composer install
 ```
-> **Note :** Ne prettez pas attention aux erreurs.
+> **Note :** Ne prêtez pas attention aux avertissements éventuels.
 
 #### b) Configurer les variables d'environnement
 

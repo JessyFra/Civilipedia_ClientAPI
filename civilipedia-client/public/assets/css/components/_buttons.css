@@ -1,0 +1,137 @@
+/* Base commune — override Bootstrap */
+.btn {
+  font-family: var(--font);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  line-height: 1;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  transition: background-color var(--transition), color var(--transition),
+              border-color var(--transition), opacity var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.btn:disabled,
+.btn[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/*  Primaire (noir)  */
+.btn-primary,
+.btn-dark {
+  background-color: var(--color-text);
+  color: #fff !important;
+  border-color: var(--color-text);
+}
+.btn-primary:hover,
+.btn-dark:hover {
+  background-color: #000;
+  border-color: #000;
+  color: #fff !important;
+}
+
+/*  Outline  */
+.btn-outline-dark,
+.btn-outline-primary {
+  background-color: transparent;
+  color: var(--color-text) !important;
+  border-color: var(--color-border-dark);
+}
+.btn-outline-dark:hover,
+.btn-outline-primary:hover {
+  background-color: var(--color-surface);
+  border-color: var(--color-text);
+  color: var(--color-text) !important;
+}
+
+/*  Secondaire (gris)  */
+.btn-secondary {
+  background-color: var(--color-surface);
+  color: var(--color-text) !important;
+  border-color: var(--color-border);
+}
+.btn-secondary:hover {
+  background-color: var(--color-border);
+  color: var(--color-text) !important;
+}
+
+/*  Danger  */
+.btn-danger {
+  background-color: var(--color-danger);
+  color: #fff !important;
+  border-color: var(--color-danger);
+}
+.btn-danger:hover {
+  background-color: #a93226;
+  border-color: #a93226;
+  color: #fff !important;
+}
+
+.btn-outline-danger {
+  background-color: transparent;
+  color: var(--color-danger) !important;
+  border-color: var(--color-danger);
+}
+.btn-outline-danger:hover {
+  background-color: var(--color-danger-bg);
+}
+
+/*  Success  */
+.btn-success {
+  background-color: var(--color-success);
+  color: #fff !important;
+  border-color: var(--color-success);
+}
+.btn-success:hover {
+  background-color: #155235;
+  color: #fff !important;
+}
+
+/*  Warning  */
+.btn-warning {
+  background-color: var(--color-warning);
+  color: #fff !important;
+  border-color: var(--color-warning);
+}
+.btn-warning:hover {
+  background-color: #7a4e00;
+  color: #fff !important;
+}
+
+/*  Tailles  */
+.btn-sm {
+  font-size: var(--text-xs);
+  padding: var(--space-1) var(--space-3);
+}
+
+.btn-lg {
+  font-size: var(--text-base);
+  padding: var(--space-4) var(--space-8);
+}
+
+/*  Largeur complète  */
+.btn.w-100 {
+  justify-content: center;
+}
+
+/*  Icône seule  */
+.btn-icon {
+  padding: var(--space-2);
+  border-radius: var(--radius);
+  line-height: 1;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--color-text-muted);
+  transition: background-color var(--transition), color var(--transition);
+}
+.btn-icon:hover {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}

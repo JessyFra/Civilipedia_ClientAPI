@@ -1,0 +1,136 @@
+/* =============================================================
+   CIVILIPÉDIA — Navbar (Bootstrap native + overrides)
+   ============================================================= */
+
+.custom-navbar {
+  background-color: var(--color-bg) !important;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.custom-navbar .navbar-brand {
+  font-size: var(--text-md);
+  font-weight: var(--weight-extrabold);
+  color: var(--color-text) !important;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-right: var(--space-4);
+  text-decoration: none !important;
+}
+
+.custom-navbar .navbar-brand i {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+/* Barre de recherche */
+.search-wrapper {
+  position: relative;
+  width: 240px;
+}
+
+.search-wrapper .form-control {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  background-color: var(--color-surface);
+  height: 34px;
+  transition: border-color var(--transition);
+}
+
+.search-wrapper .form-control:focus {
+  border-color: var(--color-text);
+  background-color: var(--color-bg);
+  box-shadow: none;
+}
+
+.search-wrapper .form-control::placeholder {
+  color: var(--color-text-light);
+}
+
+#searchResults {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 1050;
+}
+
+#searchResults li {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+}
+
+#searchResults li:last-child { border-bottom: none; }
+#searchResults li:hover { background-color: var(--color-surface); }
+
+/* Nav links */
+.custom-navbar .navbar-nav {
+  gap: var(--space-1);
+}
+
+.custom-navbar .nav-link {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted) !important;
+  padding: var(--space-2) var(--space-4) !important;
+  border-radius: var(--radius);
+  transition: color var(--transition), background-color var(--transition);
+  text-decoration: none !important;       /* pas de soulignement */
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link:focus {
+  color: var(--color-text) !important;
+  background-color: var(--color-surface);
+  text-decoration: none !important;       /* écrase Bootstrap */
+}
+
+.custom-navbar .nav-link.active {
+  color: var(--color-text) !important;
+  font-weight: var(--weight-semibold);
+  background-color: var(--color-surface);
+  text-decoration: none !important;
+}
+
+.custom-navbar .nav-link.text-danger  { color: var(--color-danger)  !important; }
+.custom-navbar .nav-link.text-danger:hover  { background-color: var(--color-danger-bg); }
+.custom-navbar .nav-link.text-warning { color: var(--color-warning) !important; }
+.custom-navbar .nav-link.text-warning:hover { background-color: var(--color-warning-bg); }
+
+/* Dropdown */
+.custom-navbar .dropdown-menu {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-2) 0;
+  font-size: var(--text-sm);
+  background-color: var(--color-bg);
+}
+
+.custom-navbar .dropdown-item {
+  padding: var(--space-2) var(--space-4);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none !important;
+}
+
+.custom-navbar .dropdown-item:hover {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  text-decoration: none !important;
+}

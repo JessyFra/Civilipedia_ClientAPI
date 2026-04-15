@@ -226,15 +226,15 @@ civilipedia-client/
 ├── public/
 │   ├── index.php          → Point d'entrée
 │   ├── avatar.php
-│   ├── assets/
-│   │   ├── css/           → Styles BEM + design tokens
-│   │   └── img/
-│   │
-│   └── src/               → Pages, layout, helpers PHP
-│       ├── pages/         → home, article, login, register, profile, admin, ...
-│       ├── layout/        → header.php, footer.php
-│       ├── ApiClient.php  → Lien avec l'api
-│       └── Auth.php
+│   └── assets/
+│       ├── css/           → Styles BEM + design tokens
+│       └── img/
+│ 
+├── src/                   → Pages, layout, helpers PHP
+│   ├── pages/             → home, article, login, register, profile, admin, ...
+│   ├── layout/            → header.php, footer.php
+│   ├── ApiClient.php      → Lien avec l'api
+│   └── Auth.php
 │
 └── .env                   → URL de l'API
 
